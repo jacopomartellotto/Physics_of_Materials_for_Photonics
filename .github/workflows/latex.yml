@@ -1,17 +1,27 @@
+name: Compila LaTeX
+
+# 👉 Sezione mancante nel tuo file: quando eseguire il workflow
+on:
+  push:
+    branches: [ main ]      # Quando fai push sul branch main
+  pull_request:
+    branches: [ main ]      # Quando apri una pull request su main
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout del repository
+        uses: actions/checkout@v4
 
-      - name: Compile LaTeX document
+      - name: Compila LaTeX
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: main.tex
+          root_file: main.tex   # Il tuo file principale .tex
 
-      - name: Upload PDF
+      - name: Carica PDF come artifact
         uses: actions/upload-artifact@v4
         with:
-          name: notes_photonics
+          name: appunti-fotonica
           path: main.pdf
