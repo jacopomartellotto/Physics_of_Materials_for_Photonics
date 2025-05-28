@@ -56,18 +56,17 @@
     \centering
     \vspace*{2cm}
     
-    {\scshape\LARGE Università degli Studi di NomeUniversità \par}
+    {\scshape\LARGE Università di Pisa \par}
     \vspace{1.5cm}
-    {\Huge\bfseries Appunti di\\[0.5cm]
-    Fisica dei Materiali per la Fotonica\par}
+    {\Huge\bfseries Notes on \\[0.5cm]
+    Physics of Materials for Photonics\par}
     \vspace{2cm}
-    {\Large\itshape Corso tenuto dal Prof. Nome Cognome\par}
+    {\Large\itshape Course taught by Prof. Riccardo Farchioni\par}
     \vfill
-    {\large Appunti a cura di Nome Cognome Studente\par}
+    {\large Notes written by Jacopo Martellotto\par}
     \vspace{0.5cm}
     {\large \today\par}
 \end{titlepage}
-
 % -----------------------
 % Indice
 % -----------------------
@@ -78,14 +77,20 @@
 % Capitoli inclusi
 % -----------------------
 \input{chapters/Structural_Properties_of_Semiconductors.tex}
-% \input{chapters/capitolo2.tex}
-% aggiungi altri capitoli come vuoi
+\input{chapters/Semiconductor_Bandstructure.tex}
+\input{chapters/Bandstructure_Modifications.tex}
+\input{chapters/Lattice_Vibrations_Phonon.tex}
+\input{chapters/Optical_Properties_of_Semiconductor.tex}
+\input{chapters/Excitonic_effects.tex}
+\input{chapters/paper_exam.tex}
 
 % -----------------------
-% Bibliografia (opzionale)
+% Bibliografia
 % -----------------------
-% \newpage
-% \bibliographystyle{plain}
-% \bibliography{bibliography}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliografia}
+\bibliographystyle{ieeetr}
+\bibliography{bibliography}
 
 \end{document}
