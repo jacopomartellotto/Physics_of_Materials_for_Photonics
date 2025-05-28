@@ -1,0 +1,91 @@
+\documentclass[11pt,a4paper]{book}
+
+% -----------------------
+% Pacchetti base
+% -----------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{siunitx}
+\usepackage{physics}
+
+% -----------------------
+% Layout
+% -----------------------
+\geometry{margin=2.5cm}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\fancyhead[L]{\leftmark}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% -----------------------
+% Colori e link
+% -----------------------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={Appunti di Fisica dei Materiali per la Fotonica}
+}
+
+% -----------------------
+% Stile titoli capitoli
+% -----------------------
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}
+  {\filleft\Huge\thechapter}
+  {1ex}
+  {\titlerule\vspace{1ex}\filright}
+  [\vspace{1ex}\titlerule]
+
+% -----------------------
+% Copertina
+% -----------------------
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\scshape\LARGE Università degli Studi di NomeUniversità \par}
+    \vspace{1.5cm}
+    {\Huge\bfseries Appunti di\\[0.5cm]
+    Fisica dei Materiali per la Fotonica\par}
+    \vspace{2cm}
+    {\Large\itshape Corso tenuto dal Prof. Nome Cognome\par}
+    \vfill
+    {\large Appunti a cura di Nome Cognome Studente\par}
+    \vspace{0.5cm}
+    {\large \today\par}
+\end{titlepage}
+
+% -----------------------
+% Indice
+% -----------------------
+\tableofcontents
+\newpage
+
+% -----------------------
+% Capitoli inclusi
+% -----------------------
+\input{chapters/Structural_Properties_of_Semiconductors.tex}
+% \input{chapters/capitolo2.tex}
+% aggiungi altri capitoli come vuoi
+
+% -----------------------
+% Bibliografia (opzionale)
+% -----------------------
+% \newpage
+% \bibliographystyle{plain}
+% \bibliography{bibliography}
+
+\end{document}
