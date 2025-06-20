@@ -5,16 +5,19 @@
 % -----------------------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[italian]{babel}
+\usepackage[english]{babel}
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{placeins}
 \usepackage{geometry}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{parskip}
 \usepackage{color}
+\usepackage{pdfpages}
 \usepackage{siunitx}
+\usepackage{float}
 \usepackage{physics}
 
 % -----------------------
@@ -65,9 +68,14 @@
     \vfill
     {\large Notes written by Jacopo Martellotto\par}
     \vspace{0.5cm}
+    \begin{center}
+      % Immagine di copertina
+    \includegraphics[width=0.6\textwidth]{img/cover.png}
+    \vspace{1cm}
+    \end{center}
     {\large \today\par}
 \end{titlepage}
-% -----------------------
+
 % Indice
 % -----------------------
 \tableofcontents
@@ -89,7 +97,7 @@
 % -----------------------
 \cleardoublepage
 \phantomsection
-\addcontentsline{toc}{chapter}{Bibliografia}
+\addcontentsline{toc}{chapter}{Bibliography}
 \bibliographystyle{ieeetr}
 \bibliography{bibliography}
 
