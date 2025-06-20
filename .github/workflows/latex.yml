@@ -1,11 +1,10 @@
 name: Compila LaTeX
 
-# 👉 Sezione mancante nel tuo file: quando eseguire il workflow
 on:
   push:
-    branches: [ main ]      # Quando fai push sul branch main
+    branches: [ main ]
   pull_request:
-    branches: [ main ]      # Quando apri una pull request su main
+    branches: [ main ]
 
 jobs:
   build:
@@ -15,10 +14,14 @@ jobs:
       - name: Checkout del repository
         uses: actions/checkout@v4
 
-      - name: Compila LaTeX
+      - name: Compila LaTeX (con bibliografia)
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: main.tex   # Il tuo file principale .tex
+          root_file: main.tex
+          latexmk_use_lualatex: false           # Usa pdflatex di default
+          latexmk_shell_escape: true            # Necessario per alcuni pacchetti
+          extra_system_packages: "biber"        # Installa biber per la bibliografia
+          latexmk_args: "-bibtex"               # Abilita gestione bibliografia (bibtex/biber)
 
       - name: Carica PDF come artifact
         uses: actions/upload-artifact@v4
